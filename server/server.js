@@ -41,4 +41,23 @@ try {nonExistentFunction ()
     console.error(error)
 }
 
+try {newNonExistentFunction ()
+} catch(error){
+    rollbar.warning(`if you procede on this path there will be consequences`)
+}
+
+try {anotherNonExistentFunction ()
+} catch(error){
+    rollbar.critical('This was a critical mistake...there will be much pain')
+}
+
+try {finalNonExistentFunction
+} catch(error){
+    rollbar.info(`hey i just met you and this is crazy but heres your error log me baby`)
+}
+
 app.listen(4000, console.log(`Server running on 4000!`))
+
+// rollbar.critical()
+// rollbar.warning()
+// rollbar.
