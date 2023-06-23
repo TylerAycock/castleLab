@@ -37,6 +37,7 @@ app.get(`/profile`, (req,resp)=>{
 
 try {nonExistentFunction ()
 } catch(error){
+    rollbar.error(error)
     console.error(error)
 }
 
